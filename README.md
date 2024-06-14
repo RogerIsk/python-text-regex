@@ -1,16 +1,36 @@
-# make happy
+# Regular expression in Python
 
-## Task
-Make any face happy. Create a function that takes a sentence containing sad faces and turn them into happy ones! This involves changing only the mouths.  
-Make sure to only change the face if there are eyes before them, round(3.4) wouldn't become round)3.4) (for example).
+## Understand the meaning
+
+Figure out the meaning of given regular expressions. Feel free to use code or [online interpreter](https://extendsclass.com/regex-tester.html#python) to test your assumption.
+
+In order to solve this exercise just explain the meaning together with an example below the given Regex.
+
+### For example
+
+([A-Z])\w+
+Extracts words with a starting capital letter.
+e.g.: Hello my name is Mathias --> matches "Hello" and "Mathias"
+
+---
+
+1. colou?r  
+--> color or colour
+
+2. (\W|^)[\w.\-]{0,25}@(gmail|deliveryhero)\.com(\W|$)  
+--> emails with TLD gmail.com or deliveryhero.com
+
+3. ^(?=.\*[a-z])(?=.\*[A-Z])(?=.\*\d).{6,12}$  
+--> PW  
+6 to 12 characters in length  
+Must have at least one uppercase letter  
+Must have at least one lower case letter  
+Must have at least one digit  
+Should contain other characters  
 
 
-## Examples:
-Sad face examples: :( 8( x( ;( 
-Happy face examples: :) 8) x) ;) 
+4. ^\#?([a-f0-9]{6}|[a-f0-9]{3})$  
+--> hex color code  
 
-## Input / Output
-```
-make_happy("My current mood: :(")    -->    "My current mood: :)"  
-make_happy("I was hungry 8(")        -->    "I was hungry 8)"  
-make_happy("print('x(')")            -->    "print('x)')"  
+5. done$  
+--> a text that ends with "done"  
